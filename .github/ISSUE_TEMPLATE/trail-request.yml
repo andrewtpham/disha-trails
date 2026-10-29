@@ -1,0 +1,37 @@
+name: Trail request
+description: Ask for offline maps or a curated guide for a trail. Upvote existing requests with 👍.
+title: "Trail request: <trail name> [<trail-id>]"
+labels: [trail-request]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [coverage dashboard](https://andrewtpham.github.io/disha-trails/) first. If the
+        trail already has a request, add a 👍 to that issue instead of opening a new one. Votes
+        help decide what gets built next.
+  - type: dropdown
+    id: want
+    attributes:
+      label: What would you like?
+      options:
+        - Offline maps along the trail
+        - A curated Disha guide
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Route link
+      description: An OpenStreetMap relation, Wikiloc, AllTrails or official page. A GPX link is best.
+    validations:
+      required: true
+  - type: input
+    id: country
+    attributes:
+      label: Country
+  - type: textarea
+    id: why
+    attributes:
+      label: Anything else?
+      description: When you plan to hike it, which sections matter most, or nearby day hikes.

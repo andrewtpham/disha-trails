@@ -1,11 +1,24 @@
-# forest-data
+# disha-trails
 
 Trail routes and boundary data for maps. The GPX files are free to download. See [ATTRIBUTION.md](ATTRIBUTION.md) for where each file comes from.
+
+## Request a trail
+
+Disha offline maps and guides grow by request. The
+[coverage dashboard](https://andrewtpham.github.io/disha-trails/) shows where maps are
+available and which trails are queued.
+
+- **Ask for a trail:** open a [trail request](https://github.com/andrewtpham/disha-trails/issues/new?template=trail-request.yml).
+  A GPX or OpenStreetMap link helps most.
+- **Vote:** add a 👍 to an existing request. The most-voted requests are built next.
+
+Requests are issues labelled `trail-request`. The dashboard is rebuilt daily and published to
+the `gh-pages` branch from a private build repo; don't edit that branch by hand.
 
 ## Project structure
 
 ```
-forest-data/
+disha-trails/
 ├── national-forests/        # US forest and park boundaries
 │   ├── fs-administrative-forest-simplified.json
 │   ├── nps-land-resources-division-boundary-and-tract-data-service.geojson
@@ -29,7 +42,7 @@ forest-data/
 Open a file on GitHub and click **Download raw file**. To link to a file or load it in code, use its raw URL:
 
 ```
-https://raw.githubusercontent.com/andrewtpham/forest-data/refs/heads/main/trails/gr20-corsica-2024.gpx
+https://raw.githubusercontent.com/andrewtpham/disha-trails/refs/heads/main/trails/gr20-corsica-2024.gpx
 ```
 
 The NPS boundary file is stored in Git LFS, so its raw URL returns a pointer. Download it from the GitHub page instead.
